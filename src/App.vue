@@ -1,8 +1,5 @@
 <template>
-  <h1>
-    Mehrans app
-  </h1>
-
+<Header/>
   <router-view></router-view>
 </template>
 
