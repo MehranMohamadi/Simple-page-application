@@ -1,5 +1,11 @@
 <template>
-    <h1>Home</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>hi im mehran </p>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
