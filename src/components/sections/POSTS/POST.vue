@@ -3,8 +3,24 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
-        name: "POST"
+
+        setup(){
+       function getusers() {
+           axios.get("https://jsonplaceholder.typicode.com/users")
+               .then(function (response) {
+                   // handle success
+                   console.log(response);
+               })
+               .catch(function (error) {
+                   // handle error
+                   console.log(error);
+               })
+       }
+
+       getusers()
+        }
     }
 </script>
 
