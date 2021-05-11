@@ -5,7 +5,9 @@ import index from './components/sections/users/index.vue';
 
 const routes = [
     { path: "/", name: "home", component: Home },
-    { path: "/users", name: "users", component: index }
+    { path: "/users", name: "users", component: index ,children:[
+    { path: ":id", name: "userid", component: Show }
+        ]}
 ];
 
 const router = createRouter({
