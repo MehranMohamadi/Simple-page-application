@@ -1,7 +1,14 @@
 <template>
 
-    <Cardview></Cardview>
-<div>{{users}}</div>
+<div class="container mt-5">
+    <div class="row g-3">
+        <div class="col-md-3"  v-for="user in users" :key="user.id">
+            <cardview :user="user"></cardview>
+        </div>
+
+    </div>
+</div>
+
 
 </template>
 
