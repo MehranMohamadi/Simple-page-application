@@ -38,8 +38,8 @@
     };
 </script>
 
-<style>
-    .router-link-active {
+<style scoped>
+    .router-link-active  {
         color: rgba(0, 0, 0, 0.9) !important;
         border-bottom: 2px solid rgba(0, 0, 0, 0.9) !important;
     }

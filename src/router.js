@@ -4,12 +4,22 @@ import index from './components/sections/users/index.vue';
 import show from "./components/sections/users/show";
 import TemplateUser from './components/sections/users/TemplateUser'
 
+import Post from './components/sections/POSTS/POST';
+import showPost from "./components/sections/POSTS/showPost";
+import TemplatePost from './components/sections/POSTS/TemplatePost'
+
 const routes = [
     {path: "/", name: "home", component: Home},
     {
         path: "/users", name: "users", component: TemplateUser, children: [
-            {path: "/users", name: "users", component: index},
+            {path: '', name: "users", component: index},
             {path: ":id", name: "userid", component: show}
+        ]
+    },
+    {
+        path: "/posts", name: "postTemplate", component: TemplatePost, children: [
+            {path: '', name: "posts", component: Post},
+            {path: ":id", name: "postid", component: showPost}
         ]
     }
 ];

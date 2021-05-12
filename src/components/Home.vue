@@ -10,6 +10,12 @@
                     totam, ratione, voluptas eveniet soluta incidunt itaque optio beatae
                     id temporibus, ex exercitationem sint ad earum in sed? Quam, cum sunt.
                 </p>
+
+
+
+
+
+                <router-link class="btn btn-danger" v-bind:to="{name:'users'}">Users</router-link>
             </div>
         </div>
     </div>
