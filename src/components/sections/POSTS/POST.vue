@@ -5,7 +5,7 @@
         <span class="visually-hidden">Loading...</span>
     </div>
 
-    <div v-else class="col-md-4" v-for="post in posts" :key="post.id">
+    <div v-else class="col-md-3" v-for="post in posts" :key="post.id">
         <div class="card">
             <div class="card-header">
                 <router-link v-bind:to="{name:'postid',params:{id: post.title}}"> {{post.title}}

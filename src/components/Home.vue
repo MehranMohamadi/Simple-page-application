@@ -15,7 +15,9 @@
 
 
 
-                <router-link class="btn btn-danger" v-bind:to="{name:'users'}">Users</router-link>
+                <router-link class="btn btn-light" v-bind:to="{name:'users'}">Users</router-link>
+                <router-link class="btn btn-dark" v-bind:to="{name:'posts'}">Posts</router-link>
+
             </div>
         </div>
     </div>
