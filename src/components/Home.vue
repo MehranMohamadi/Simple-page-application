@@ -16,7 +16,7 @@
 
 
                 <router-link class="btn btn-light" v-bind:to="{name:'users'}">Users</router-link>
-                <router-link class="btn btn-dark" v-bind:to="{name:'posts'}">Posts</router-link>
+                <router-link class="btn btn-dark ms-3" v-bind:to="{name:'posts'}">Posts</router-link>
 
             </div>
         </div>

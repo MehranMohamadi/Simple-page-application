@@ -1,10 +1,17 @@
 <template>
-    <div>2</div>
+    <div class="container mt-5">
+        <div class="row g-3">
+
+            <router-view></router-view>
+
+        </div>
+
+    </div>
 </template>
 
 <script>
     export default {
-        name: "TemplatePost"
+        name: "TemplateUser"
     }
 </script>
 
