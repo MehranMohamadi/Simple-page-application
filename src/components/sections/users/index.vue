@@ -9,15 +9,13 @@
                 <cardview :user="user"></cardview>
             </div>
 
-    <!-- <router-view v-else></router-view> -->
-
 </template>
 
 <script>
     import axios from "axios";
     import {ref} from 'vue';
     import cardview from "./cardview";
-    import {useRoute} from 'vue-router'
+
 
     export default {
         components: {
@@ -27,7 +25,6 @@
 
             const users = ref([]);
             const loading = ref(true);
-            const route = useRoute();
 
 
             function getusers() {
@@ -44,7 +41,7 @@
             }
 
             getusers();
-            return {users, loading, route};
+            return {users, loading};
         }
     }
 </script>

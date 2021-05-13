@@ -19,7 +19,7 @@ const routes = [
     {
         path: "/posts", name: "postTemplate", component: TemplatePost, children: [
             {path: '', name: "posts", component: Post},
-            {path: ":id", name: "postid", component: showPost}
+            {path: ":id", name: "post_id", component: showPost}
         ]
     }
 ];

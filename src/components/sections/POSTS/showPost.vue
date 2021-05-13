@@ -14,12 +14,9 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">body:{{post.body}}</li>
-
             </ul>
         </div>
     </div>
-
-    <!-- <router-view v-else></router-view> -->
 
 </template>
 
@@ -32,12 +29,12 @@
 
         setup() {
 
-            const post = ref({});
+            const post = ref([]);
             const loading = ref(true);
             const route = useRoute();
 
 
-            function getpost() {
+            function get_post() {
                 axios.get(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)
                     .then(function (response) {
                         // handle success
@@ -50,7 +47,7 @@
                     })
             }
 
-            getpost();
+            get_post();
             return {post, loading, route};
         }
     }

@@ -8,7 +8,7 @@
     <div v-else class="col-md-4" v-for="post in posts" :key="post.id">
         <div class="card">
             <div class="card-header">
-                <router-link v-bind:to="{name:'postid',params:{id: post.title}}"> {{post.title}}
+                <router-link v-bind:to="{name:'post_id',params:{id: post.title}}"> {{post.title}}
                 </router-link>
             </div>
             <ul class="list-group list-group-flush">
@@ -25,7 +25,7 @@
 <script>
     import axios from "axios";
     import {ref} from 'vue';
-    import {useRoute} from 'vue-router'
+
 
     export default {
 
@@ -33,7 +33,7 @@
 
             const posts = ref([]);
             const loading = ref(true);
-            const route = useRoute();
+
 
 
             function getpost() {
@@ -50,7 +50,7 @@
             }
 
             getpost();
-            return {posts, loading, route};
+            return {posts, loading};
         }
     }
 </script>
