@@ -16,6 +16,11 @@
                 <li class="list-group-item">body:{{post.body}}</li>
             </ul>
         </div>
+
+        <div class="card-footer">
+            <button class="btn btn-sm btn-danger s-3">Delete</button>
+            <button class="btn btn-sm btn-light s-3">Edit</button>
+        </div>
     </div>
 
 </template>
