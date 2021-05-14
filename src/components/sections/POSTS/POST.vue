@@ -1,5 +1,7 @@
 <template>
-
+<div>
+    <RouterLink class="btn-danger" :to="{name:'createpost'}"></RouterLink>
+</div>
 
     <div v-if="loading" class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
