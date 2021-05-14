@@ -10,7 +10,7 @@
     <div v-else class="col-md-4" v-for="post in posts" :key="post.id">
         <div class="card">
             <div class="card-header">
-                <router-link v-bind:to="{name:'post_id',params:{id: post.title}}"> {{post.title}}
+                <router-link :to="{name:'post_id',params:{id: post.title}}"> {{post.title}}
                 </router-link>
             </div>
             <ul class="list-group list-group-flush">
