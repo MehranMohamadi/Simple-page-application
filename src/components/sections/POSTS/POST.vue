@@ -1,6 +1,6 @@
 <template>
 <div>
-    <RouterLink class="btn-danger" :to="{name:'createpost'}"></RouterLink>
+    <RouterLink class="btn btn-danger" :to="{name:'createpost'}">CreatePost</RouterLink>
 </div>
 
     <div v-if="loading" class="spinner-border" role="status">
