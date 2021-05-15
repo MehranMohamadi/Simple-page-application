@@ -4,12 +4,17 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Title</label>
             <input v-model.lazy="form.title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+            <div class="form-text text-danger">
+                {{form.titleerror}}
+            </div>
         </div>
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Body</label>
             <input v-model.lazy.trim="form.body" type="text" class="form-control" id="exampleInputPassword1" :placeholder="form.titleerror">
+            <div class="form-text text-danger">
+                {{form.bodyerror}}
+            </div>
         </div>
 
 
@@ -24,12 +29,20 @@
             const form=reactive({
                 title:"",
                 body:"",
-                titleerror:""
+                titleerror:"",
+                bodyerror:""
             });
 
             function validate() {
-                if (form.title===""){
-                    form.titleerror='title is required'
+                if (form.title === "") {
+                    form.titleerror = 'title is required'
+                } else {
+                    form.titleerror = ''
+                }
+                if (form.body === "") {
+                    form.bodyerror = 'Body is required'
+                } else {
+                    form.bodyerror = ''
                 }
             }
 
