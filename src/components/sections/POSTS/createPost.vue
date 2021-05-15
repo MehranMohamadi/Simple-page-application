@@ -20,13 +20,16 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Post</button>
+            <button type="submit" class="btn btn-primary" :disabled="loading">
+                <span v-if="loading" class="spinner-border spinner-border-sm" role="status"></span>
+                Post
+            </button>
         </form>
     </div>
 </template>
 
 <script>
-    import {reactive} from 'vue';
+    import {reactive, ref} from 'vue';
     import axios from 'axios';
 
     export default {
@@ -37,6 +40,7 @@
                 titleerror: "",
                 bodyerror: ""
             });
+            const loading = ref(false)
 
             function validate() {
                 if (form.title === "") {
@@ -50,7 +54,8 @@
                     form.bodyerror = ''
                 }
                 if (form.title !== "" && form.body !== "") {
-                    createpost()
+                    loading.value=true;
+                    createpost();
                 }
             }
 
@@ -62,7 +67,8 @@
                 })
                     .then(function (response) {
                         // handle success
-                      console.log(response.data)
+                        console.log(response.data);
+                        loading.value=false;
                     })
                     .catch(function (error) {
                         // handle error
@@ -70,7 +76,7 @@
                     })
             }
 
-            return {form, validate}
+            return {form, validate,loading}
         }
     }
 </script>
