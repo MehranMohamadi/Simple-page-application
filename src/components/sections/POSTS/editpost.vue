@@ -12,7 +12,7 @@
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Body</label>
-                <input v-model.lazy.trim="form.body" rows="6" type="text" class="form-control"
+                <input v-model.lazy.trim="form.body" type="text" class="form-control"
                        id="exampleInputPassword1"
                        :placeholder="form.titleerror">
                 <div class="form-text text-danger">
