@@ -12,7 +12,8 @@
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Body</label>
-                <input v-model.lazy.trim="form.body" rows="6" type="text" class="form-control" id="exampleInputPassword1"
+                <input v-model.lazy.trim="form.body" rows="6" type="text" class="form-control"
+                       id="exampleInputPassword1"
                        :placeholder="form.titleerror">
                 <div class="form-text text-danger">
                     {{form.bodyerror}}
@@ -31,7 +32,7 @@
 <script>
     import {reactive, ref} from 'vue';
     import axios from 'axios';
-    import  Swal from 'sweetalert2';
+    import Swal from 'sweetalert2';
     import {useRoute} from "vue-router";
 
     export default {
@@ -44,8 +45,6 @@
             });
             const loading = ref(false)
             const route = useRoute();
-
-
 
 
             function get_post() {
@@ -75,7 +74,7 @@
                     form.bodyerror = ''
                 }
                 if (form.title !== "" && form.body !== "") {
-                    loading.value=true;
+                    loading.value = true;
                     updatepost();
                 }
             }
@@ -83,15 +82,15 @@
             function updatepost() {
                 axios
                     .put(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`, {
-                    id:route.params.id,
-                    title: form.title,
-                    body: form.body,
-                    userId: 1,
-                })
+                        id: route.params.id,
+                        title: form.title,
+                        body: form.body,
+                        userId: 1,
+                    })
                     .then(function (response) {
                         // handle success
                         console.log(response.data);
-                        loading.value=false;
+                        loading.value = false;
                         Swal.fire({
                             title: 'thanks!',
                             text: 'Post Edited successfully',
@@ -105,7 +104,7 @@
                     })
             }
 
-            return {form, validate,loading}
+            return {form, validate, loading}
         }
     }
 </script>
