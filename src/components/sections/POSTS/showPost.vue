@@ -18,7 +18,7 @@
         </div>
 
         <div class="card-footer">
-            <button class="btn btn-sm btn-danger s-3">Delete</button>
+            <button @click="postDelete" class="btn btn-sm btn-danger s-3">Delete</button>
             <button class="btn btn-sm btn-light s-3">Edit</button>
         </div>
     </div>
@@ -29,6 +29,7 @@
     import axios from "axios";
     import {ref} from 'vue';
     import {useRoute} from 'vue-router'
+    import Swal from "sweetalert2";
 
     export default {
 
@@ -52,8 +53,28 @@
                     })
             }
 
+            function postDelete() {
+                axios.delete(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)
+                    .then(function () {
+                        Swal.fire({
+                            title: 'thanks!',
+                            text: `Post ${route.params.id} delete successfully`,
+                            icon: 'warning',
+                            confirmButtonText: 'OK'
+                        })
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    })
+            }
+
+
             get_post();
-            return {post, loading, route};
+            return {post, loading, route,postDelete};
+
+
+
         }
     }
 </script>
