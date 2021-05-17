@@ -2,7 +2,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">WebProg.ir</a>
+                <a class="navbar-brand blue" href="#">MehranMohammadi.ir</a>
                 <button
                         class="navbar-toggler"
                         type="button"
@@ -42,6 +42,21 @@
     .router-link-active  {
         color: rgba(0, 0, 0, 0.9) !important;
         border-bottom: 2px solid rgba(0, 0, 0, 0.9) !important;
+    }
+    .blue{
+        background: #333333;
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 19px;
+        letter-spacing: -1px;
+        word-spacing: 2.4px;
+        color: #FFFFFF;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        border-radius: 20px;
     }
 
 </style>

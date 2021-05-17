@@ -1,7 +1,7 @@
 <template>
     <Header/>
 
-    <router-view style=" border-radius: 5px;  background-image: url('https://mdbcdn.b-cdn.net/img/new/standard/city/041.jpg')"></router-view>
+    <router-view></router-view>
 
 </template>
 
